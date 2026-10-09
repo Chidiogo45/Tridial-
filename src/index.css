@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-electric: #2F5FFF;
+  --color-electric-hover: #1e4ee8;
+  --color-navy: #0B0F1A;
+  --color-navy-surface: #111827;
+  --color-navy-card: #151D30;
+  --color-mint: #2DD4BF;
+  --color-mint-dim: rgba(45, 212, 191, 0.15);
+  --color-neutral-muted: #5B6472;
+  --color-offwhite: #F7F9FC;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #0B0F1A;
+    background-color: #FFFFFF;
+  }
+}
+
+/* Custom keyframes for transaction-graph pulses and packet flow */
+@keyframes pulse-radar {
+  0% {
+    r: 8;
+    opacity: 0.9;
+    stroke-width: 2;
+  }
+  50% {
+    r: 28;
+    opacity: 0.4;
+    stroke-width: 1.5;
+  }
+  100% {
+    r: 44;
+    opacity: 0;
+    stroke-width: 0.5;
+  }
+}
+
+.radar-ring {
+  animation: pulse-radar 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  transform-origin: center;
+}
+
+@keyframes packet-dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.packet-flow-line {
+  stroke-dasharray: 6 10;
+  animation: packet-dash 2s linear infinite;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2F5FFF;
+}
