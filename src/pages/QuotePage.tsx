@@ -43,9 +43,9 @@ export const QuotePage: React.FC<QuotePageProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -62,11 +62,11 @@ export const QuotePage: React.FC<QuotePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Main Intake Form Section */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {submitted ? (
-            <div className="p-8 sm:p-12 rounded-2xl bg-[#0C1220] border border-slate-800 text-white shadow-2xl text-center space-y-6">
+            <div className="p-8 sm:p-12 rounded-2xl bg-[#0C1220]/95 backdrop-blur-md border border-slate-800 text-white shadow-2xl text-center space-y-6">
               <div className="w-16 h-16 rounded-full bg-[#2DD4BF]/20 border border-[#2DD4BF]/40 flex items-center justify-center text-[#2DD4BF] mx-auto">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
@@ -109,20 +109,20 @@ export const QuotePage: React.FC<QuotePageProps> = ({ onNavigate }) => {
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono transition-colors"
+                  className="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono transition-colors cursor-pointer"
                 >
                   Submit Another Ingestion Request
                 </button>
                 <button
                   onClick={() => onNavigate('architecture')}
-                  className="px-5 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white text-xs font-mono transition-colors"
+                  className="px-5 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white text-xs font-mono transition-colors cursor-pointer shadow-md shadow-[#2F5FFF]/20"
                 >
                   Review Technical Architecture While Waiting
                 </button>
               </div>
             </div>
           ) : (
-            <div className="bg-[#F7F9FC] border border-slate-200 rounded-2xl p-8 sm:p-10 shadow-sm">
+            <div className="bg-white/85 backdrop-blur-md border border-slate-200/90 rounded-2xl p-8 sm:p-10 shadow-xs">
               
               <div className="pb-8 border-b border-slate-200">
                 <span className="text-xs font-mono uppercase tracking-wider text-[#2F5FFF] font-semibold">

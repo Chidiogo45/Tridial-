@@ -53,12 +53,12 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827] border border-slate-700 text-xs font-mono text-[#2DD4BF]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827]/80 border border-slate-700/80 text-xs font-mono text-[#2DD4BF]">
               <span className="w-2 h-2 rounded-full bg-[#2DD4BF] animate-pulse" />
               <span>LIVE OPERATIONAL TELEMETRY</span>
             </div>
@@ -73,11 +73,11 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Main Status Dashboard */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="py-16 sm:py-24 border-b border-slate-300/30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Top Banner Status Card */}
-          <div className="p-6 rounded-2xl bg-[#090D18] border border-slate-800 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
+          <div className="p-6 rounded-2xl bg-[#090D18]/95 backdrop-blur-md border border-slate-800 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#2DD4BF]/20 border border-[#2DD4BF]/40 flex items-center justify-center text-[#2DD4BF]">
                 <CheckCircle2 className="w-6 h-6" />
@@ -105,7 +105,7 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
               <span>Status / Latency / 90d Uptime</span>
             </div>
 
-            <div className="divide-y divide-slate-100 border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs">
+            <div className="divide-y divide-slate-100 border border-slate-200/90 rounded-2xl overflow-hidden bg-white/85 backdrop-blur-md shadow-xs">
               {components.map((comp, i) => (
                 <div key={i} className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-slate-50 transition-colors">
                   <div>
@@ -137,7 +137,7 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* 90-Day Uptime Graphical History */}
-          <div className="p-6 rounded-2xl bg-[#F7F9FC] border border-slate-200 space-y-4">
+          <div className="p-6 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-4">
             <div className="flex items-center justify-between text-xs font-mono text-slate-600">
               <span className="font-semibold uppercase text-slate-900">90-Day System Uptime History</span>
               <span className="text-teal-700 font-semibold">99.998% Overall Availability</span>
@@ -168,11 +168,11 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {regions.map((reg, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-white border border-slate-200 space-y-2">
+                <div key={idx} className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-2">
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-slate-900 font-semibold">{reg.name}</span>
                   </div>
-                  <div className="flex items-center justify-between text-xs font-mono text-slate-500 pt-2 border-t border-slate-100">
+                  <div className="flex items-center justify-between text-xs font-mono text-slate-500 pt-2 border-t border-slate-200/80">
                     <div className="flex items-center gap-1.5 text-teal-700 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF]" />
                       <span>{reg.status}</span>
@@ -185,12 +185,12 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* Incident History Log */}
-          <div className="space-y-4 pt-6 border-t border-slate-200">
+          <div className="space-y-4 pt-6 border-t border-slate-300/40">
             <div className="text-xs font-mono text-slate-500 uppercase tracking-wider">
               Past Incident History (Last 90 Days)
             </div>
 
-            <div className="p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+            <div className="p-6 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-3">
               <div className="flex items-center justify-between text-xs font-mono">
                 <span className="text-slate-900 font-semibold">Scheduled Core Graph Model Re-indexing</span>
                 <span className="text-slate-500">Completed 14 days ago</span>
@@ -212,7 +212,7 @@ export const StatusPage: React.FC<StatusPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Footer Support Banner */}
-      <section className="py-12 bg-[#0B0F1A] text-white">
+      <section className="py-12 text-white border-t border-slate-800/60">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#2DD4BF]" />

@@ -18,9 +18,9 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
   };
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -37,14 +37,14 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
       </section>
 
       {/* Quick Jump Section Bar */}
-      <div className="sticky top-16 z-30 bg-[#F7F9FC] border-b border-slate-200 px-4 py-3 shadow-xs">
+      <div className="sticky top-16 z-30 bg-white/80 backdrop-blur-md border-b border-slate-300/40 px-4 py-3 shadow-xs">
         <div className="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto text-xs font-mono">
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <span className="text-slate-500 uppercase tracking-wider hidden md:inline">Jump to Section:</span>
             <button
               onClick={() => scrollToSection('security')}
               className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                activeSection === 'security' ? 'bg-[#0B0F1A] text-white' : 'text-slate-700 hover:bg-slate-200'
+                activeSection === 'security' ? 'bg-slate-900 text-white' : 'text-slate-700 hover:bg-slate-200/60'
               }`}
             >
               1. Security Practices
@@ -52,7 +52,7 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
             <button
               onClick={() => scrollToSection('privacy')}
               className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                activeSection === 'privacy' ? 'bg-[#0B0F1A] text-white' : 'text-slate-700 hover:bg-slate-200'
+                activeSection === 'privacy' ? 'bg-slate-900 text-white' : 'text-slate-700 hover:bg-slate-200/60'
               }`}
             >
               2. Privacy Policy
@@ -60,7 +60,7 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
             <button
               onClick={() => scrollToSection('ai')}
               className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                activeSection === 'ai' ? 'bg-[#0B0F1A] text-white' : 'text-slate-700 hover:bg-slate-200'
+                activeSection === 'ai' ? 'bg-slate-900 text-white' : 'text-slate-700 hover:bg-slate-200/60'
               }`}
             >
               3. Responsible AI Approach
@@ -68,7 +68,7 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
             <button
               onClick={() => scrollToSection('data')}
               className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
-                activeSection === 'data' ? 'bg-[#0B0F1A] text-white' : 'text-slate-700 hover:bg-slate-200'
+                activeSection === 'data' ? 'bg-slate-900 text-white' : 'text-slate-700 hover:bg-slate-200/60'
               }`}
             >
               4. Data Handling Practices
@@ -76,7 +76,7 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
           </div>
           <button
             onClick={() => onNavigate('quote')}
-            className="text-[#2F5FFF] hover:underline font-semibold shrink-0 pl-4 hidden sm:block"
+            className="text-[#2F5FFF] hover:underline font-semibold shrink-0 pl-4 hidden sm:block cursor-pointer"
           >
             Request Full Security Audit Pack &rarr;
           </button>
@@ -195,28 +195,28 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-serif text-sm">Data in Transit</strong>
                 <p className="text-xs text-slate-600">
                   Encrypted using TLS 1.3 with AES-256-GCM and forward secrecy. Legacy protocols (TLS 1.0, 1.1, and insecure ciphers) are permanently disabled at our edge reverse proxies.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-serif text-sm">Data at Rest</strong>
                 <p className="text-xs text-slate-600">
                   Where configuration state or model weights are stored, volume-level AES-256 encryption is enforced with customer-managed encryption keys (CMEK) via AWS/GCP KMS.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-serif text-sm">Retention Windows</strong>
                 <p className="text-xs text-slate-600">
                   Ephemeral transaction hops automatically decay from active RAM after 30 to 90 days (configurable per institutional compliance policy). Historical logs are compressed into encrypted cold storage.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-serif text-sm">Disaster Recovery & RPO/RTO</strong>
                 <p className="text-xs text-slate-600">
                   Active-Active multi-availability zone failover. Recovery Point Objective (RPO) = 0 seconds; Recovery Time Objective (RTO) &lt; 5 seconds.
@@ -227,18 +227,18 @@ export const TrustCenterPage: React.FC<TrustCenterPageProps> = ({ onNavigate }) 
         </section>
 
         {/* Audit Pack Request CTA */}
-        <div className="p-8 rounded-2xl bg-[#0C1220] border border-slate-800 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-8 rounded-2xl bg-[#0C1220]/95 backdrop-blur-md border border-slate-800 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
           <div>
             <h3 className="font-serif font-semibold text-xl">
               Conducting Vendor Due Diligence?
             </h3>
-            <p className="text-xs text-slate-400 mt-1 max-w-md">
+            <p className="text-xs text-slate-300 mt-1 max-w-md">
               We provide our comprehensive institutional audit binder (SOC 2, ISO 27001, penetration test executive summaries, and standard DPA) under mutual NDA.
             </p>
           </div>
           <button
             onClick={() => onNavigate('quote')}
-            className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shrink-0"
+            className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shrink-0 shadow-md shadow-[#2F5FFF]/20"
           >
             Request Due Diligence Package
           </button>

@@ -61,9 +61,9 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
     : categories.filter(c => c.type === selectedCategory);
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -80,15 +80,15 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
       </section>
 
       {/* Categories Filter and Grid */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="py-16 sm:py-24 border-b border-slate-300/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Filter Bar */}
-          <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 pb-4">
+          <div className="flex flex-wrap items-center gap-2 border-b border-slate-300/40 pb-4">
             <button
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors cursor-pointer ${
-                selectedCategory === 'all' ? 'bg-[#0B0F1A] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                selectedCategory === 'all' ? 'bg-slate-900 text-white shadow-xs' : 'bg-white/80 backdrop-blur-md text-slate-700 hover:bg-white border border-slate-200/80'
               }`}
             >
               All Integrations (12)
@@ -96,7 +96,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
             <button
               onClick={() => setSelectedCategory('rails')}
               className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors cursor-pointer ${
-                selectedCategory === 'rails' ? 'bg-[#0B0F1A] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                selectedCategory === 'rails' ? 'bg-slate-900 text-white shadow-xs' : 'bg-white/80 backdrop-blur-md text-slate-700 hover:bg-white border border-slate-200/80'
               }`}
             >
               Payment Rails & ISO 20022
@@ -104,7 +104,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
             <button
               onClick={() => setSelectedCategory('cores')}
               className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors cursor-pointer ${
-                selectedCategory === 'cores' ? 'bg-[#0B0F1A] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                selectedCategory === 'cores' ? 'bg-slate-900 text-white shadow-xs' : 'bg-white/80 backdrop-blur-md text-slate-700 hover:bg-white border border-slate-200/80'
               }`}
             >
               Core Banking & Ledgers
@@ -112,7 +112,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
             <button
               onClick={() => setSelectedCategory('brokers')}
               className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors cursor-pointer ${
-                selectedCategory === 'brokers' ? 'bg-[#0B0F1A] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                selectedCategory === 'brokers' ? 'bg-slate-900 text-white shadow-xs' : 'bg-white/80 backdrop-blur-md text-slate-700 hover:bg-white border border-slate-200/80'
               }`}
             >
               Kafka & Event Brokers
@@ -134,7 +134,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {cat.items.map((item, i) => (
-                    <div key={i} className="p-6 rounded-xl bg-[#F7F9FC] border border-slate-200 flex flex-col justify-between">
+                    <div key={i} className="p-6 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs flex flex-col justify-between">
                       <div>
                         <div className="font-serif font-semibold text-slate-900 text-base">
                           {item.name}
@@ -143,7 +143,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
                           {item.desc}
                         </p>
                       </div>
-                      <div className="mt-6 pt-3 border-t border-slate-200 text-[11px] font-mono text-[#2F5FFF] flex items-center gap-1">
+                      <div className="mt-6 pt-3 border-t border-slate-200/80 text-[11px] font-mono text-[#2F5FFF] flex items-center gap-1">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#2DD4BF]" />
                         <span>Pre-built connector verified</span>
                       </div>
@@ -158,7 +158,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
       </section>
 
       {/* Code Snippet: Example Webhook Ingestion */}
-      <section className="py-16 bg-[#080C16] text-white">
+      <section className="py-16 sm:py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
             <span className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -172,7 +172,7 @@ export const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ onNavigate }
             </p>
           </div>
 
-          <div className="p-5 rounded-xl bg-[#0B0F1A] border border-slate-800 font-mono text-xs text-slate-300 overflow-x-auto shadow-2xl">
+          <div className="p-5 rounded-xl bg-[#0B0F1A]/90 backdrop-blur-md border border-slate-800 font-mono text-xs text-slate-300 overflow-x-auto shadow-2xl">
             <pre className="leading-relaxed">
 {`import { TridialClient } from '@tridial/inference-sdk';
 

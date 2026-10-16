@@ -10,9 +10,9 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
   const [activeTab, setActiveTab] = useState<'comparison' | 'graph-engine' | 'data-flow'>('data-flow');
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Platform Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -29,7 +29,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Primary Data-Flow Visual Section */}
-      <section className="py-16 sm:py-20 border-b border-slate-200 bg-[#F7F9FC]">
+      <section className="py-16 sm:py-20 border-b border-slate-300/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10">
             <span className="text-xs font-mono uppercase tracking-wider text-[#2F5FFF] font-semibold">
@@ -47,7 +47,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
             
             {/* Stage 1 */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative flex flex-col justify-between">
+            <div className="p-6 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-xs relative flex flex-col justify-between">
               <div>
                 <div className="text-[11px] font-mono text-[#2F5FFF] font-semibold pb-2 border-b border-slate-100 flex items-center justify-between">
                   <span>STAGE 01</span>
@@ -66,7 +66,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Stage 2 */}
-            <div className="p-6 rounded-xl bg-[#0F1626] border border-slate-800 text-white shadow-md relative flex flex-col justify-between">
+            <div className="p-6 rounded-xl bg-[#0F1626]/95 backdrop-blur-md border border-slate-800 text-white shadow-md relative flex flex-col justify-between">
               <div>
                 <div className="text-[11px] font-mono text-[#2DD4BF] font-semibold pb-2 border-b border-slate-800 flex items-center justify-between">
                   <span>STAGE 02</span>
@@ -85,7 +85,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Stage 3 */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative flex flex-col justify-between">
+            <div className="p-6 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-xs relative flex flex-col justify-between">
               <div>
                 <div className="text-[11px] font-mono text-amber-600 font-semibold pb-2 border-b border-slate-100 flex items-center justify-between">
                   <span>STAGE 03</span>
@@ -104,7 +104,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Stage 4 */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative flex flex-col justify-between">
+            <div className="p-6 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-xs relative flex flex-col justify-between">
               <div>
                 <div className="text-[11px] font-mono text-[#2F5FFF] font-semibold pb-2 border-b border-slate-100 flex items-center justify-between">
                   <span>STAGE 04</span>
@@ -124,11 +124,11 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
 
           </div>
 
-          <div className="mt-6 p-4 rounded-xl bg-blue-50/70 border border-blue-200/80 flex items-center justify-between text-xs text-blue-950 font-mono">
+          <div className="mt-6 p-4 rounded-xl bg-white/80 backdrop-blur-md border border-slate-200/90 flex items-center justify-between text-xs text-slate-900 font-mono shadow-xs">
             <span>TOTAL ROUNDTRIP SLA: GUARANTEED &lt; 35ms ACROSS 99% OF SAMPLES</span>
             <button
               onClick={() => onNavigate('architecture')}
-              className="text-[#2F5FFF] hover:underline flex items-center gap-1 font-semibold"
+              className="text-[#2F5FFF] hover:underline flex items-center gap-1 font-semibold cursor-pointer"
             >
               <span>Explore Interactive Architecture</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -138,7 +138,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Mechanism Comparison: Graph Modeling vs Static Rules */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <span className="text-xs font-mono uppercase tracking-wider text-[#2F5FFF] font-semibold">
@@ -156,7 +156,7 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Left: Static Rule-Based Detection */}
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-xs">
               <div className="flex items-center justify-between pb-4 border-b border-slate-200">
                 <h3 className="font-serif font-semibold text-lg text-slate-900">
                   Static Rule-Based Systems
@@ -252,24 +252,24 @@ export const PlatformPage: React.FC<PlatformPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Callout CTA */}
-      <section className="py-16 bg-[#F7F9FC] border-t border-slate-200">
+      <section className="py-16 sm:py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
-          <h3 className="text-2xl font-serif font-semibold text-slate-900">
+          <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-white">
             Ready to review technical specifications?
           </h3>
-          <p className="text-slate-600 text-sm max-w-xl mx-auto">
+          <p className="text-slate-300 text-sm max-w-xl mx-auto">
             Review the 4 core detection capabilities or schedule a technical walk-through with our systems engineers.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <button
               onClick={() => onNavigate('capabilities')}
-              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shadow-md shadow-[#2F5FFF]/20"
             >
               View 4 Capabilities
             </button>
             <button
               onClick={() => onNavigate('quote')}
-              className="px-6 py-3 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-slate-800 font-medium text-xs sm:text-sm transition-colors cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium text-xs sm:text-sm transition-colors cursor-pointer"
             >
               Request Technical Pilot
             </button>

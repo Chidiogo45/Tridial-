@@ -27,9 +27,9 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
   const estimate = getEstimatedCost(monthlyVolume);
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -46,7 +46,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Pricing Philosophy & Volume Estimator */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="py-16 sm:py-24 border-b border-slate-300/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -66,7 +66,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="space-y-4 text-xs sm:text-sm text-slate-700">
-                <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+                <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                   <div className="font-semibold text-slate-900 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#2DD4BF]" />
                     <span>All 4 Detection Capabilities Unlocked</span>
@@ -76,7 +76,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+                <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                   <div className="font-semibold text-slate-900 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#2DD4BF]" />
                     <span>Unlimited Fraud Analyst Seats</span>
@@ -86,7 +86,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+                <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                   <div className="font-semibold text-slate-900 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#2DD4BF]" />
                     <span>Free Historic 90-Day Replay Evaluation</span>
@@ -96,7 +96,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+                <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                   <div className="font-semibold text-slate-900 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#2DD4BF]" />
                     <span>Dedicated Cluster SLA</span>
@@ -109,7 +109,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Right: Interactive Volume Estimator */}
-            <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#0C1220] border border-slate-800 text-white shadow-xl">
+            <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#0C1220]/95 backdrop-blur-md border border-slate-800 text-white shadow-xl">
               <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                 <div className="flex items-center gap-2">
                   <Calculator className="w-4 h-4 text-[#2DD4BF]" />
@@ -147,7 +147,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#080C16] border border-slate-800/80 space-y-3">
+                <div className="p-4 rounded-xl bg-[#080C16]/90 border border-slate-800/80 space-y-3">
                   <div className="flex justify-between text-xs font-mono text-slate-400">
                     <span>Effective Rate per 1k Txns:</span>
                     <span className="text-[#2DD4BF] font-semibold">${estimate.ratePerK.toFixed(2)}</span>
@@ -180,7 +180,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* FAQ / Guidance Section */}
-      <section className="py-16 bg-[#F7F9FC]">
+      <section className="py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center">
             <h3 className="text-2xl font-serif font-semibold text-slate-900">
@@ -192,28 +192,28 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-700">
-            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
+            <div className="p-5 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-2">
               <strong className="text-slate-900 font-medium block">What counts as an evaluated transaction?</strong>
               <p className="text-slate-500 leading-relaxed">
                 Any transaction event submitted to the Tridial endpoint for risk evaluation. Health check pings, historical replay tests, and dashboard interactions are never billed.
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
+            <div className="p-5 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-2">
               <strong className="text-slate-900 font-medium block">How does the 90-day historic replay work?</strong>
               <p className="text-slate-500 leading-relaxed">
                 You provide anonymized transaction records from the past 90 days. We run our graph engine offline and deliver an audit report comparing detected fraud vs your historical results. This evaluation is completely complimentary.
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
+            <div className="p-5 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-2">
               <strong className="text-slate-900 font-medium block">Are there minimum monthly commitments?</strong>
               <p className="text-slate-500 leading-relaxed">
                 Standard pilot contracts begin at 500,000 transactions per month. Scaling institutions can adjust their committed baseline quarterly.
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
+            <div className="p-5 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-2">
               <strong className="text-slate-900 font-medium block">Is on-premise or sovereign VPC hosting available?</strong>
               <p className="text-slate-500 leading-relaxed">
                 Yes. For tier-1 regulated banking institutions with strict sovereign data residency requirements, Tridial deploys into your dedicated AWS, GCP, or Azure VPC enclave.

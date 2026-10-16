@@ -24,6 +24,39 @@
   }
 }
 
+/* Continuous flowing page gradient: Electric Blue -> Mint/Teal -> White/Off-white -> Deep Navy */
+.tridial-flow-gradient {
+  background: 
+    radial-gradient(ellipse 90% 55% at 50% 0%, rgba(47, 95, 255, 0.28) 0%, transparent 60%),
+    radial-gradient(circle 800px at 85% 10%, rgba(45, 212, 191, 0.16) 0%, transparent 65%),
+    radial-gradient(circle 850px at 15% 42%, rgba(45, 212, 191, 0.12) 0%, transparent 60%),
+    radial-gradient(circle 900px at 85% 65%, rgba(47, 95, 255, 0.10) 0%, transparent 65%),
+    radial-gradient(ellipse 80% 45% at 50% 98%, rgba(47, 95, 255, 0.24) 0%, transparent 65%),
+    linear-gradient(
+      180deg,
+      #080E1C 0%,
+      #0C1935 4%,
+      #12254E 10%,
+      #1C376F 17%,
+      #2E518E 24%,
+      #4D72B0 31%,
+      #7D9ED1 38%,
+      #B4CEEE 44%,
+      #DDEAF8 49%,
+      #EDF5FA 53%,
+      #F2F8F6 58%,
+      #F8FAFC 65%,
+      #F2F7FA 72%,
+      #E0ECF8 78%,
+      #ADC8EE 84%,
+      #6083C0 89%,
+      #233F76 94%,
+      #0E1C38 97%,
+      #070B16 100%
+    );
+  background-attachment: scroll;
+}
+
 /* Custom keyframes for transaction-graph pulses and packet flow */
 @keyframes pulse-radar {
   0% {

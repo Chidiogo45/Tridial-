@@ -8,12 +8,12 @@ interface GraphDetectionPageProps {
 
 export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNavigate }) => {
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827] border border-slate-700 text-xs font-mono text-[#2DD4BF]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827]/80 border border-slate-700/80 text-xs font-mono text-[#2DD4BF]">
               <span>TECHNICAL WHITE PAPER // VENDOR EVALUATION</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-white tracking-tight leading-tight">
@@ -27,11 +27,11 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
       </section>
 
       {/* Main Long-Form Article Body */}
-      <article className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <article className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-800 font-sans leading-relaxed text-sm sm:text-base">
           
           {/* Metadata Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200 text-xs text-slate-500 font-mono">
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-300/40 text-xs text-slate-500 font-mono">
             <div>Authored by Tridial Infrastructure Architecture Group</div>
             <div>Reading Time: 6 min · Topic: Relational Topology</div>
           </div>
@@ -44,7 +44,7 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
             <p>
               In virtually all modern banking cores, transaction records are stored as flat rows in relational tables:
             </p>
-            <div className="p-4 rounded-xl bg-slate-100 border border-slate-200 font-mono text-xs text-slate-800">
+            <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs font-mono text-xs text-slate-800">
               [txn_id, sender_id, recipient_id, amount, timestamp, currency, status]
             </div>
             <p>
@@ -59,7 +59,7 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
           </div>
 
           {/* Section 2: The False Positive Trap */}
-          <div className="space-y-4 pt-6 border-t border-slate-200">
+          <div className="space-y-4 pt-6 border-t border-slate-200/80">
             <h2 className="text-2xl font-serif font-semibold text-slate-900 tracking-tight">
               2. The False Positive Dilemma
             </h2>
@@ -79,7 +79,7 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
           </div>
 
           {/* Section 3: Topological Invariants */}
-          <div className="space-y-4 pt-6 border-t border-slate-200">
+          <div className="space-y-4 pt-6 border-t border-slate-200/80">
             <h2 className="text-2xl font-serif font-semibold text-slate-900 tracking-tight">
               3. Topological Invariants: What Fraud Actually Looks Like
             </h2>
@@ -88,19 +88,19 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1 text-xs">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1 text-xs">
                 <strong className="text-slate-900 block font-serif text-sm">Cycle Detection</strong>
                 <p className="text-slate-600">
                   Mule networks inevitably route funds back to common consolidation hubs. Graph cycles (A → B → C → A) stand out immediately against natural acyclic spending trees.
                 </p>
               </div>
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1 text-xs">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1 text-xs">
                 <strong className="text-slate-900 block font-serif text-sm">Degree Centrality</strong>
                 <p className="text-slate-600">
                   A device fingerprint or IP subnet connecting to 40 distinct legal accounts within 48 hours exhibits an extreme degree anomaly that no legitimate user generates.
                 </p>
               </div>
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1 text-xs">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1 text-xs">
                 <strong className="text-slate-900 block font-serif text-sm">Temporal Velocity</strong>
                 <p className="text-slate-600">
                   Legitimate funds sit in accounts for days or weeks. Fraudulent funds must be moved before chargebacks trigger, creating hyper-compressed transfer velocities.
@@ -110,7 +110,7 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
           </div>
 
           {/* Section 4: Overcoming the 35ms Latency Barrier */}
-          <div className="space-y-4 pt-6 border-t border-slate-200">
+          <div className="space-y-4 pt-6 border-t border-slate-200/80">
             <h2 className="text-2xl font-serif font-semibold text-slate-900 tracking-tight">
               4. Engineering the Sub-35ms In-Memory Engine
             </h2>
@@ -128,7 +128,7 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
           </div>
 
           {/* Author Conclusion Box */}
-          <div className="mt-12 p-6 rounded-2xl bg-[#0C1220] border border-slate-800 text-white space-y-4">
+          <div className="mt-12 p-6 rounded-2xl bg-[#0C1220]/95 backdrop-blur-md border border-slate-800 text-white space-y-4 shadow-xl">
             <h3 className="font-serif font-semibold text-lg text-white">
               Conclusion for Fintech Reviewers
             </h3>
@@ -138,7 +138,7 @@ export const GraphDetectionPage: React.FC<GraphDetectionPageProps> = ({ onNaviga
             <div className="pt-2">
               <button
                 onClick={() => onNavigate('quote')}
-                className="px-5 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white text-xs font-mono font-medium transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="px-5 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white text-xs font-mono font-medium transition-colors flex items-center gap-1.5 cursor-pointer shadow-md shadow-[#2F5FFF]/20"
               >
                 <span>Request Benchmark on Your Historic Replay</span>
                 <ArrowRight className="w-3.5 h-3.5" />

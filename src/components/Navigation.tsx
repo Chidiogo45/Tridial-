@@ -43,7 +43,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#0B0F1A]/95 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <header className="sticky top-0 z-40 w-full bg-[#080E1C]/85 backdrop-blur-md border-b border-slate-800/50 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Brand Logomark & Name */}

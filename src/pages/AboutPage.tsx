@@ -8,9 +8,9 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -27,7 +27,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Founder Note / Core Thesis (Long-form typography) */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 font-sans">
           
           <div className="border-l-2 border-[#2F5FFF] pl-6 py-2">
@@ -45,7 +45,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               However, the defensive tooling used to protect these transactions remained stagnant. Most fraud platforms continue to evaluate payments as isolated rows in a relational database:
             </p>
 
-            <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 font-mono text-xs text-slate-800 space-y-1">
+            <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs font-mono text-xs text-slate-800 space-y-1">
               <div>IF transaction_amount &gt; $5,000 AND card_country != ip_country</div>
               <div>THEN flag_for_review</div>
             </div>
@@ -76,34 +76,34 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* Institutional Principles */}
-          <div className="pt-8 border-t border-slate-200 space-y-4">
+          <div className="pt-8 border-t border-slate-200/80 space-y-4">
             <h3 className="font-serif font-semibold text-lg text-slate-900">
               Our Core Operating Principles
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-medium">1. Absolute Explainability</strong>
                 <p className="text-slate-600">
                   Black-box predictions are unacceptable in regulated banking. Every flag includes plain-language reasoning and auditable graph lineage.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-medium">2. Zero Raw PII Storage</strong>
                 <p className="text-slate-600">
                   Our graph models evaluate cryptographically pseudonymized tokens. Personal data is never stored at our inference edges.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-medium">3. Deterministic Performance</strong>
                 <p className="text-slate-600">
                   Latency budgets are strict. We guarantee sub-35ms evaluation so checkout conversion rates are never compromised.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F9FC] border border-slate-200 space-y-1">
+              <div className="p-4 rounded-xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-1">
                 <strong className="text-slate-900 block font-medium">4. Institution-Centric Authority</strong>
                 <p className="text-slate-600">
                   Tridial supplies intelligence, but final decision authority and risk policy configurations remain in the hands of the customer.
@@ -112,7 +112,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-slate-200 flex items-center justify-between">
+          <div className="pt-8 border-t border-slate-200/80 flex items-center justify-between">
             <div>
               <div className="font-serif font-semibold text-slate-900 text-sm">
                 Tridial Systems Engineering
@@ -124,7 +124,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
 
             <button
               onClick={() => onNavigate('quote')}
-              className="px-5 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs transition-colors flex items-center gap-1.5 cursor-pointer shadow-md shadow-[#2F5FFF]/20"
             >
               <span>Connect with Our Risk Engineers</span>
               <ArrowRight className="w-3.5 h-3.5" />

@@ -8,9 +8,9 @@ interface CompliancePageProps {
 
 export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) => {
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -27,11 +27,11 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
       </section>
 
       {/* Main Governance Content */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="py-16 sm:py-24 border-b border-slate-300/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           {/* Executive Overview for Budget Holders */}
-          <div className="p-8 rounded-2xl bg-[#F7F9FC] border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-3">
               <span className="text-xs font-mono uppercase tracking-wider text-[#2F5FFF] font-semibold">
                 Strategic Compliance Value
@@ -44,8 +44,8 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
               </p>
             </div>
 
-            <div className="lg:col-span-4 p-5 rounded-xl bg-white border border-slate-200 space-y-2 text-xs font-mono text-slate-700">
-              <div className="text-[#2F5FFF] font-semibold text-[11px] uppercase pb-2 border-b border-slate-100">
+            <div className="lg:col-span-4 p-5 rounded-xl bg-slate-50/80 border border-slate-200 space-y-2 text-xs font-mono text-slate-700">
+              <div className="text-[#2F5FFF] font-semibold text-[11px] uppercase pb-2 border-b border-slate-200">
                 Compliance Outcomes
               </div>
               <div className="flex justify-between py-1">
@@ -67,7 +67,7 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* Pillar 1: Structuring & Smurfing Detection */}
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-4">
               <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-[#2F5FFF]">
                 <Scale className="w-5 h-5" />
               </div>
@@ -90,7 +90,7 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
             </div>
 
             {/* Pillar 2: Automated SAR Package Generation */}
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-4">
               <div className="w-10 h-10 rounded-lg bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700">
                 <FileCheck className="w-5 h-5" />
               </div>
@@ -113,7 +113,7 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
             </div>
 
             {/* Pillar 3: Model Explainability & Anti-Bias Assurance */}
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-4">
               <div className="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-700">
                 <BookOpen className="w-5 h-5" />
               </div>
@@ -136,7 +136,7 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
             </div>
 
             {/* Pillar 4: Cryptographic Non-Repudiation */}
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs space-y-4">
               <div className="w-10 h-10 rounded-lg bg-slate-100 border border-slate-300 flex items-center justify-center text-slate-800">
                 <Lock className="w-5 h-5" />
               </div>
@@ -164,18 +164,18 @@ export const CompliancePage: React.FC<CompliancePageProps> = ({ onNavigate }) =>
       </section>
 
       {/* Compliance Officer CTA */}
-      <section className="py-16 bg-[#0B0F1A] text-white">
+      <section className="py-16 sm:py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
-          <h3 className="text-2xl font-serif font-semibold">
+          <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-white">
             Request our Model Risk Management (MRM) Documentation
           </h3>
-          <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+          <p className="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
             We provide prospective institutional partners with our full Model Risk Governance dossier, fair-lending audit proofs, and SAR generation samples.
           </p>
           <div className="pt-2">
             <button
               onClick={() => onNavigate('quote')}
-              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shadow-md shadow-[#2F5FFF]/20"
             >
               Request Compliance & Governance Package
             </button>

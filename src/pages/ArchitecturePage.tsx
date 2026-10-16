@@ -24,12 +24,12 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
   const [activeSpec, setActiveSpec] = useState<'network' | 'graph' | 'security'>('network');
 
   return (
-    <div className="w-full bg-[#0B0F1A] text-white">
+    <div className="w-full bg-transparent text-white">
       {/* Hero Header */}
-      <section className="py-16 sm:py-20 border-b border-slate-800">
+      <section className="py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827] border border-slate-700 text-xs font-mono text-[#2DD4BF]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827]/80 border border-slate-700/80 text-xs font-mono text-[#2DD4BF]">
               <span>TECHNICAL SPECIFICATION V4.2</span>
               <span className="text-slate-600">|</span>
               <span>ENGINEERING REVIEW</span>
@@ -45,7 +45,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
       </section>
 
       {/* Main Interactive Animated Architecture Diagram Section */}
-      <section className="py-16 sm:py-20 border-b border-slate-800 bg-[#080C16]">
+      <section className="py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -62,7 +62,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
       </section>
 
       {/* Deep Technical Deep-Dives for Reviewers */}
-      <section className="py-16 sm:py-24 bg-[#0B0F1A] border-b border-slate-800">
+      <section className="py-16 sm:py-24 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="max-w-3xl mb-12">
@@ -80,7 +80,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             {/* Spec 1: Network Ingestion Topology */}
-            <div className="p-6 rounded-2xl bg-[#0F1626] border border-slate-800 flex flex-col justify-between">
+            <div className="p-6 rounded-2xl bg-[#0F1626]/85 backdrop-blur-md border border-slate-800 flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-[#2F5FFF]/20 border border-[#2F5FFF]/40 flex items-center justify-center text-[#2F5FFF] mb-5">
                   <Server className="w-5 h-5" />
@@ -118,7 +118,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
             </div>
 
             {/* Spec 2: In-Memory Subgraph Assembly */}
-            <div className="p-6 rounded-2xl bg-[#0F1626] border border-slate-800 flex flex-col justify-between">
+            <div className="p-6 rounded-2xl bg-[#0F1626]/85 backdrop-blur-md border border-slate-800 flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-[#2DD4BF]/20 border border-[#2DD4BF]/40 flex items-center justify-center text-[#2DD4BF] mb-5">
                   <GitBranch className="w-5 h-5" />
@@ -156,7 +156,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
             </div>
 
             {/* Spec 3: Cryptographic Isolation & Security Boundary */}
-            <div className="p-6 rounded-2xl bg-[#0F1626] border border-slate-800 flex flex-col justify-between">
+            <div className="p-6 rounded-2xl bg-[#0F1626]/85 backdrop-blur-md border border-slate-800 flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-400 mb-5">
                   <Lock className="w-5 h-5" />
@@ -198,7 +198,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
       </section>
 
       {/* Code / gRPC Schema Example */}
-      <section className="py-16 bg-[#080C16]">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
             <span className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -212,7 +212,7 @@ export const ArchitecturePage: React.FC<ArchitecturePageProps> = ({ onNavigate }
             </p>
           </div>
 
-          <div className="rounded-xl bg-[#0B0F1A] border border-slate-800 p-5 font-mono text-xs overflow-x-auto text-slate-300 shadow-xl">
+          <div className="rounded-xl bg-[#0B0F1A]/90 backdrop-blur-md border border-slate-800 p-5 font-mono text-xs overflow-x-auto text-slate-300 shadow-xl">
             <pre className="leading-relaxed">
 {`syntax = "proto3";
 package tridial.inference.v1;

@@ -97,7 +97,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F1A] text-slate-100 flex flex-col font-sans selection:bg-[#2F5FFF] selection:text-white">
+    <div className="min-h-screen tridial-flow-gradient text-slate-100 flex flex-col font-sans selection:bg-[#2F5FFF] selection:text-white">
       {/* Top Main Navigation */}
       <Navigation 
         currentPage={currentPage} 

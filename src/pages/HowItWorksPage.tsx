@@ -33,9 +33,9 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
   };
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -52,7 +52,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
       </section>
 
       {/* 4 Deep Expanded Steps */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="py-16 sm:py-24 border-b border-slate-300/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -74,8 +74,8 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
                   onClick={() => setActiveStepTab(step.num)}
                   className={`w-full text-left p-4 rounded-xl border transition-all cursor-pointer ${
                     activeStepTab === step.num
-                      ? 'bg-[#0E1526] text-white border-[#2F5FFF] shadow-md'
-                      : 'bg-[#F7F9FC] text-slate-800 border-slate-200 hover:border-slate-300'
+                      ? 'bg-[#0E1526]/95 backdrop-blur-md text-white border-[#2F5FFF] shadow-md'
+                      : 'bg-white/80 backdrop-blur-md text-slate-800 border-slate-200/90 hover:border-slate-300'
                   }`}
                 >
                   <div className="flex items-center justify-between text-xs font-mono">
@@ -95,7 +95,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
                 </button>
               ))}
 
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 mt-6 text-xs text-slate-600">
+              <div className="p-4 rounded-xl bg-white/75 backdrop-blur-md border border-slate-200/80 mt-6 text-xs text-slate-700 shadow-xs">
                 <div className="font-semibold text-slate-900 mb-1">Total Pipeline SLA</div>
                 End-to-end evaluation completes within <strong>35 milliseconds</strong>, well within typical 100–300ms payment gateway authorization windows.
               </div>
@@ -267,7 +267,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
       </section>
 
       {/* Interactive Walkthrough Example of a Single Transaction */}
-      <section className="py-16 sm:py-24 bg-[#F7F9FC]">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
@@ -286,14 +286,14 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
             <div className="flex items-center gap-2">
               <button
                 onClick={runSimulation}
-                className="px-4 py-2 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white text-xs font-mono flex items-center gap-1.5 transition-colors cursor-pointer"
+                className="px-4 py-2 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white text-xs font-mono flex items-center gap-1.5 transition-colors cursor-pointer shadow-md shadow-[#2F5FFF]/20"
               >
                 <Play className="w-3.5 h-3.5" />
                 <span>Run Pipeline Simulation</span>
               </button>
               <button
                 onClick={resetSimulation}
-                className="p-2 rounded-lg bg-white border border-slate-300 text-slate-600 hover:text-slate-900 transition-colors"
+                className="p-2 rounded-lg bg-white/90 backdrop-blur-md border border-slate-300 text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
                 title="Reset simulation"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
@@ -302,12 +302,12 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
           </div>
 
           {/* Simulation Timeline Container */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div className="bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               
               {/* Event 1 */}
               <div className={`p-4 rounded-xl border transition-all ${
-                simulationStage >= 1 ? 'border-[#2F5FFF] bg-blue-50/50' : 'border-slate-200 bg-slate-50 opacity-60'
+                simulationStage >= 1 ? 'border-[#2F5FFF] bg-blue-50/70' : 'border-slate-200 bg-white/60 opacity-60'
               }`}>
                 <div className="text-[11px] font-mono text-slate-500 flex justify-between">
                   <span>T + 0ms</span>
@@ -326,7 +326,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
 
               {/* Event 2 */}
               <div className={`p-4 rounded-xl border transition-all ${
-                simulationStage >= 2 ? 'border-[#2DD4BF] bg-teal-50/50' : 'border-slate-200 bg-slate-50 opacity-60'
+                simulationStage >= 2 ? 'border-[#2DD4BF] bg-teal-50/70' : 'border-slate-200 bg-white/60 opacity-60'
               }`}>
                 <div className="text-[11px] font-mono text-slate-500 flex justify-between">
                   <span>T + 12ms</span>
@@ -345,7 +345,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
 
               {/* Event 3 */}
               <div className={`p-4 rounded-xl border transition-all ${
-                simulationStage >= 3 ? 'border-amber-400 bg-amber-50/50' : 'border-slate-200 bg-slate-50 opacity-60'
+                simulationStage >= 3 ? 'border-amber-400 bg-amber-50/70' : 'border-slate-200 bg-white/60 opacity-60'
               }`}>
                 <div className="text-[11px] font-mono text-slate-500 flex justify-between">
                   <span>T + 24ms</span>
@@ -364,7 +364,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
 
               {/* Event 4 */}
               <div className={`p-4 rounded-xl border transition-all ${
-                simulationStage >= 4 ? 'border-rose-500 bg-rose-50/60' : 'border-slate-200 bg-slate-50 opacity-60'
+                simulationStage >= 4 ? 'border-rose-500 bg-rose-50/70' : 'border-slate-200 bg-white/60 opacity-60'
               }`}>
                 <div className="text-[11px] font-mono text-slate-500 flex justify-between">
                   <span>T + 29ms</span>
@@ -405,18 +405,18 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onNavigate }) =>
       </section>
 
       {/* CTA Footer */}
-      <section className="py-16 bg-[#0B0F1A] text-white text-center">
+      <section className="py-16 sm:py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
-          <h3 className="text-2xl font-serif font-semibold">
+          <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-white">
             Evaluate Tridial on your historic transaction logs
           </h3>
-          <p className="text-slate-400 text-sm max-w-xl mx-auto">
+          <p className="text-slate-300 text-sm max-w-xl mx-auto">
             We provide sandbox verification and offline replay tools to evaluate detection fidelity before writing a single production line of code.
           </p>
           <div className="pt-2">
             <button
               onClick={() => onNavigate('quote')}
-              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shadow-md shadow-[#2F5FFF]/20"
             >
               Request Replay Sandbox Pilot
             </button>

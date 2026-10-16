@@ -8,9 +8,9 @@ interface RoadmapPageProps {
 
 export const RoadmapPage: React.FC<RoadmapPageProps> = ({ onNavigate }) => {
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -27,13 +27,13 @@ export const RoadmapPage: React.FC<RoadmapPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Three-Column Plain Text-Forward Roadmap Layout */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             {/* Column 1: Current Platform */}
-            <div className="p-8 rounded-2xl bg-[#F7F9FC] border border-slate-200 flex flex-col justify-between">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-md border border-slate-200/90 shadow-xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-slate-200">
                   <div className="flex items-center gap-2">
@@ -100,7 +100,7 @@ export const RoadmapPage: React.FC<RoadmapPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Column 2: Ongoing Improvements */}
-            <div className="p-8 rounded-2xl bg-white border border-[#2F5FFF]/30 shadow-lg shadow-[#2F5FFF]/5 flex flex-col justify-between relative">
+            <div className="p-8 rounded-2xl bg-white/90 backdrop-blur-md border border-[#2F5FFF]/40 shadow-lg shadow-[#2F5FFF]/5 flex flex-col justify-between relative">
               <div className="absolute -top-3 right-6 px-2.5 py-0.5 rounded text-[10px] font-mono uppercase bg-[#2F5FFF] text-white">
                 Active Sprint
               </div>
@@ -171,7 +171,7 @@ export const RoadmapPage: React.FC<RoadmapPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Column 3: Product Direction */}
-            <div className="p-8 rounded-2xl bg-[#0C1220] border border-slate-800 text-slate-200 flex flex-col justify-between">
+            <div className="p-8 rounded-2xl bg-[#0C1220]/95 backdrop-blur-md border border-slate-800 text-slate-200 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                   <div className="flex items-center gap-2">
@@ -229,18 +229,18 @@ export const RoadmapPage: React.FC<RoadmapPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-16 bg-[#F7F9FC] border-t border-slate-200 text-center">
+      <section className="py-16 sm:py-20 text-white text-center">
         <div className="max-w-2xl mx-auto px-4 space-y-4">
-          <h3 className="text-2xl font-serif font-semibold text-slate-900">
+          <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-white">
             Have specific architectural requirements?
           </h3>
-          <p className="text-slate-600 text-xs sm:text-sm">
+          <p className="text-slate-300 text-xs sm:text-sm">
             Our engineering team regularly incorporates partner requirements into our active sprint cycles.
           </p>
           <div className="pt-2">
             <button
               onClick={() => onNavigate('quote')}
-              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shadow-md shadow-[#2F5FFF]/20"
             >
               Discuss Pipeline Integration
             </button>

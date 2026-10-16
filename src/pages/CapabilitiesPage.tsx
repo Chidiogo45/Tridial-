@@ -61,9 +61,9 @@ export const CapabilitiesPage: React.FC<CapabilitiesPageProps> = ({ onNavigate }
   ];
 
   return (
-    <div className="w-full bg-[#FFFFFF] text-[#0B0F1A]">
+    <div className="w-full bg-transparent">
       {/* Header */}
-      <section className="bg-[#0B0F1A] text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="text-white py-16 sm:py-20 border-b border-slate-800/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF]">
@@ -80,7 +80,7 @@ export const CapabilitiesPage: React.FC<CapabilitiesPageProps> = ({ onNavigate }
       </section>
 
       {/* 4 Capabilities Grid with Hover Interactions */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -90,8 +90,8 @@ export const CapabilitiesPage: React.FC<CapabilitiesPageProps> = ({ onNavigate }
                 onClick={() => setSelectedCap(idx)}
                 className={`p-8 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                   selectedCap === idx
-                    ? 'bg-[#0E1526] text-white border-[#2F5FFF] shadow-xl shadow-[#2F5FFF]/10 -translate-y-1'
-                    : 'bg-[#F7F9FC] text-slate-900 border-slate-200 hover:border-slate-300 hover:-translate-y-1 hover:shadow-md'
+                    ? 'bg-[#0E1526]/95 backdrop-blur-md text-white border-[#2F5FFF] shadow-xl shadow-[#2F5FFF]/10 -translate-y-1'
+                    : 'bg-white/85 backdrop-blur-md text-slate-900 border-slate-200/90 hover:border-slate-300 hover:-translate-y-1 hover:shadow-md'
                 }`}
               >
                 <div>
@@ -145,7 +145,7 @@ export const CapabilitiesPage: React.FC<CapabilitiesPageProps> = ({ onNavigate }
             ))}
           </div>
 
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-slate-200/90 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h4 className="font-serif font-semibold text-slate-900 text-base">
                 Looking to evaluate these 4 capabilities on your live traffic?
@@ -156,7 +156,7 @@ export const CapabilitiesPage: React.FC<CapabilitiesPageProps> = ({ onNavigate }
             </div>
             <button
               onClick={() => onNavigate('quote')}
-              className="px-6 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shrink-0"
+              className="px-6 py-2.5 rounded-lg bg-[#2F5FFF] hover:bg-[#1e4ee8] text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer shrink-0 shadow-md shadow-[#2F5FFF]/20"
             >
               Request Pilot Access
             </button>
